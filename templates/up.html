@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异常行为检测平台 V1.0</title>
+    <style>
+        body{
+            position: relative;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+        .input{
+                position: absolute;
+                display: flex;
+                background: rgba(246, 244, 244, 0.25);
+                backdrop-filter: blur(15px);
+                gap:30px;
+                box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+                width: 700px;
+                height: 700px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+        }
+        .put .text{
+            position: relative;
+            display: flex;
+            width: 400px;
+            height: 40px;
+
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        .put  .file{
+            display: flex;
+
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .put .button
+        {
+            position: relative;
+            display: flex;
+            width: 400px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        .bg {
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: url(../static/url/login_bgnew.jpg) ;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="bg">
+<div class="put">
+     <h1>异常行为检测主界面</h1>
+
+    <form method="post" action="/up" enctype="multipart/form-data">
+
+    <!--    #    <input type="file" name="myimg">#}-->
+       <div> <input type="file" class="custom-file-input" id="fileInput" name="myimg" multiple></div>
+        <br>
+        <div><input type="submit" class="button"  value="上传图片" name="get_up"></div>
+        <br>
+        <div><input type="submit" value="单张展示" name="show"></div>
+        <br>
+        <div><input type="submit" value="运行" name="test"></div>
+        <br>
+
+
+
+    <!--    <button type="submit" name="button" value="Button 1">Button 1</button>-->
+    </form>
+
+     <form method="post" action="/logout" enctype="multipart/form-data">
+         <input type="hidden" name="csrf_token" value="csrf">
+     <div><input type="submit" value="退出登陆" name="logout"></div>
+     </form>
+<!--    <form method="post" action="/" enctype="multipart/form-data">-->
+<!--         <div><input type="submit" value="运行" name="test"></div>-->
+<!--    </form>-->
+
+</div>
+</div>
+
+
+</body>
+</html>

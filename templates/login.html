@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>异常行为检测平台 V1.0</title>
+</head>
+ <style>
+        .put
+        {
+
+            align-items: center;
+            justify-content: center;
+        }
+        .go{
+            display: flex;
+            justify-content: center;
+        }
+        p :after {
+           content: "";
+            display: block;
+            width: 2px;
+            height: 44px;
+            background: #ffffff;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        .login-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: url(../static/url/login_bgnew.jpg) ;
+            background-size: 100% 100%;
+        }
+        /*登录框*/
+    .login-container{
+        top:50%;
+        left: 50%;
+        /*transform: translate(-50%,-50%);*/
+        margin-top: 10px;
+        padding: 25px;
+        background: rgba(255,255,255,0.3);
+        border-radius: 10px;
+        /*width: 470px;*/
+        max-width:500px;
+    }
+
+    </style>
+<body>
+
+<div class="login-page">
+    <div clss="header">
+        <div class="logo">
+            <img src="../static/url/logo_new2.png" class>
+
+        </div>
+        <div class="login-container">
+            <div class="login-box">
+                <h1>异常行为检测平台</h1>
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}
+            <form method="POST" action="/login">
+                <label for="username">用户:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <br>
+                <div class="go">
+                <input type="submit" value="登陆">
+                </div>
+            </form>
+
+            </div>
+        </div>
+        <div class="put">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

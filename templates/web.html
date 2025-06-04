@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异常视频检测平台 V1.0</title>
+    <style>
+        body{
+            position: relative;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+        .input{
+                position: absolute;
+                display: flex;
+                background: rgba(246, 244, 244, 0.25);
+                backdrop-filter: blur(15px);
+                gap:30px;
+                box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+                width: 700px;
+                height: 700px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+        }
+        .put .text{
+            position: relative;
+            display: flex;
+            width: 400px;
+            height: 40px;
+
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        .put  .file{
+            display: flex;
+
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .put .button
+        {
+            position: relative;
+            display: flex;
+            width: 400px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="put">
+
+    <form method="post" action="/up" enctype="multipart/form-data">
+
+    <!--    #    <input type="file" name="myimg">#}-->
+       <div> <input type="file" class="custom-file-input" id="fileInput" name="myimg" multiple></div>
+        <br>
+        <div><input type="submit" class="button"  value="上传视频" name="get_up"></div>
+        <br>
+        数据已经保存
+        <div><input type="submit" value="运行" name="test"></div>
+
+    <!--    <button type="submit" name="button" value="Button 1">Button 1</button>-->
+    </form>
+<!--    <form method="post" action="/" enctype="multipart/form-data">-->
+<!--         <div><input type="submit" value="运行" name="test"></div>-->
+<!--    </form>-->
+
+</div>
+
+</body>
+</html>

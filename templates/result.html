@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异常行为检测平台 V1.0</title>
+</head>
+<style>
+    .cen{
+        display: flex;
+            justify-content: center;
+          /*background: url(../static/url/login_bgnew.jpg) ;*/
+    }
+    .pc{
+        display: flex;
+            justify-content: center;
+    }
+</style>
+<body>
+<div class="cen">
+<h1>检测结果</h1>
+</div>
+<div class="pc">
+
+
+<!--<img src="../data/result/1.jpg" height="224" width="224"/>-->
+<!--<img src="{{ url_for('static', filename='1.jpg')}}">-->
+
+
+<img src="../static/img.jpg" height="224" width="224"/>
+    <br>
+
+
+
+</div>
+<div class="cen">
+<!--    psnr={{psnr}}-->
+     <p>PSNR值: {{ psnr }}</p>
+     <br>
+    <p>检测结果: {{ out_p }}
+<!--        {% if out_p == "正常" %}-->
+<!--            <span class="normal">{{ out_p }}</span>-->
+<!--        {% else %}-->
+
+
+<!--        {% endif %}-->
+    </p>
+</div>
+</body>
+
+</html>
